@@ -1,0 +1,92 @@
+.TH-Container {
+    border-radius: 12px;
+    width: 80px;
+    height: 130px;
+    margin-right: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.TH-Container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.TH-Container:active {
+    filter: brightness(0.85);
+}
+
+.TH-TopBar, .TH-BottomBar {
+    width: 100%;
+    height: 18px;
+    position: absolute;
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.TH-TopBar {
+    top: 0;
+}
+
+.TH-BottomBar {
+    bottom: 0;
+    border-top: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+.TH-Posts {
+    width: 100%;
+    height: 100%;
+}
+
+.TH-AddPost, .TH-Post {
+    border-radius: 4px;
+    width: auto;
+    height: 32px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.TH-AddPost:hover, .TH-Post:hover {
+    transform: translateY(-2px);
+}
+
+.TH-AddPost {
+    margin: 20px 5px 0px;
+    position: relative;
+}
+
+.TH-Button {
+    border-radius: 4px;
+    width: 28px;
+    height: 7px;
+    margin: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: background 0.3s ease;
+}
+
+.Theme-Purple {
+    .TH-Container {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+
+    .TH-TopBar, .TH-BottomBar {
+        background: #4a148c;
+    }
+
+    .TH-BottomBar {
+        border-top: solid 1px #6a11cb;
+    }
+
+    .TH-AddPost, .TH-Post {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+    }
+
+    .TH-Button {
+        background: linear-gradient(345deg, #d500f9, #651fff);
+    }
+}
